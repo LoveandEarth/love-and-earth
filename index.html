@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love & Earth Cleanup Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game">
+    <header class="hud">
+      <div class="title-group">
+        <p class="eyebrow" id="main-title">LOVE & EARTH</p>
+        <div class="title-row">
+          <h1 id="main-subtitle">Clean the EARTH</h1>
+          <div class="title-stats">
+            <div class="tree-age-card" aria-label="World Tree Age">
+              <span class="tree-age-title">World Tree Age</span>
+              <strong id="tree-age-days">0 DAYS</strong>
+            </div>
+            <div class="global-heart-counter" aria-label="Global heart count">
+              <span class="global-heart-icon" aria-hidden="true">&#10084;</span>
+              <span id="global-heart-count">0</span>
+            </div>
+            <time class="taiwan-time" id="taiwan-time" aria-label="Current local time"></time>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="scene" aria-label="Earth cleanup game">
+      <div class="sky-glow"></div>
+      <div class="language-screen" id="language-screen" aria-label="Choose language">
+        <div class="language-buttons">
+          <button class="language-button" type="button" data-language="zh-TW">&#32321;&#39636;&#20013;&#25991;</button>
+          <button class="language-button" type="button" data-language="zh-CN">&#31616;&#20307;&#20013;&#25991;</button>
+          <button class="language-button" type="button" data-language="en">English</button>
+          <button class="language-button" type="button" data-language="fr">Fran&ccedil;ais</button>
+          <button class="language-button" type="button" data-language="es">Espa&ntilde;ol</button>
+          <button class="language-button" type="button" data-language="ja">&#26085;&#26412;&#35486;</button>
+          <button class="language-button" type="button" data-language="ru">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</button>
+        </div>
+      </div>
+      <aside class="scoreboard" aria-label="Game scores">
+        <div class="score-row level-row">
+          <span class="score-label">LEVEL</span>
+          <span class="level-badge" id="level-badge">
+            <span class="level-medal">&#127941;</span>
+            <strong id="level">1</strong>
+          </span>
+        </div>
+        <div class="score-row">
+          <span class="score-label">CLEAN</span>
+          <strong id="clean-score">0</strong>
+        </div>
+        <div class="score-row">
+          <span class="score-label">LOVE</span>
+          <strong id="love-score">0</strong>
+        </div>
+        <div class="score-row">
+          <span class="score-label">SMILE &#128578;</span>
+          <strong id="smile-score">0</strong>
+        </div>
+        <div class="score-row">
+          <span class="score-label">HARMONY</span>
+          <strong id="harmony-score">0</strong>
+        </div>
+      </aside>
+      <div class="tree-area">
+        <div class="snow-cap"></div>
+        <div class="tree" id="tree" aria-hidden="true">
+          <div class="canopy canopy-back"></div>
+          <div class="canopy canopy-left"></div>
+          <div class="canopy canopy-right"></div>
+          <div class="canopy canopy-top"></div>
+          <div class="branch branch-left"></div>
+          <div class="branch branch-right"></div>
+          <div class="trunk"></div>
+          <div class="root root-left"></div>
+          <div class="root root-right"></div>
+          <div class="tree-glow"></div>
+          <div class="tree-blessing" id="tree-blessing"></div>
+          <div class="heart-blossom" id="heart-blossom" aria-hidden="true">
+            <span class="blossom-petal blossom-petal-one"></span>
+            <span class="blossom-petal blossom-petal-two"></span>
+            <span class="blossom-petal blossom-petal-three"></span>
+            <span class="blossom-petal blossom-petal-four"></span>
+            <span class="blossom-petal blossom-petal-five"></span>
+            <span class="blossom-center"></span>
+            <span class="blossom-sparkle blossom-sparkle-one"></span>
+            <span class="blossom-sparkle blossom-sparkle-two"></span>
+            <span class="blossom-sparkle blossom-sparkle-three"></span>
+          </div>
+        </div>
+        <div class="tree-birds" aria-hidden="true">
+          <span class="tree-bird bird-one">~v~</span>
+          <span class="tree-bird bird-two">~v~</span>
+          <span class="tree-bird bird-three">~v~</span>
+          <span class="tree-bird bird-four">~v~</span>
+          <span class="tree-bird bird-five">~v~</span>
+        </div>
+        <div class="tree-squirrel" aria-hidden="true">&#128063;</div>
+        <div class="tree-rainbow" aria-hidden="true"></div>
+        <div class="rainbow-cloud" aria-hidden="true"></div>
+        <p class="tree-label">North Pole Tree</p>
+      </div>
+
+      <div class="earth-wrap">
+        <div class="earth-rays" id="earth-rays" aria-hidden="true"></div>
+        <div class="earth" id="earth" aria-hidden="true">
+          <div class="earth-aura"></div>
+          <div class="earth-inner">
+            <div class="map-band">
+              <div class="map-set">
+                <div class="continent north-america"></div>
+                <div class="continent south-america"></div>
+                <div class="continent greenland"></div>
+                <div class="continent europe"></div>
+                <div class="continent africa"></div>
+                <div class="continent asia-main"></div>
+                <div class="continent india"></div>
+                <div class="continent southeast-asia"></div>
+                <div class="continent japan"></div>
+                <div class="continent australia"></div>
+                <div class="taiwan"></div>
+              </div>
+              <div class="map-set" aria-hidden="true">
+                <div class="continent north-america"></div>
+                <div class="continent south-america"></div>
+                <div class="continent greenland"></div>
+                <div class="continent europe"></div>
+                <div class="continent africa"></div>
+                <div class="continent asia-main"></div>
+                <div class="continent india"></div>
+                <div class="continent southeast-asia"></div>
+                <div class="continent japan"></div>
+                <div class="continent australia"></div>
+                <div class="taiwan"></div>
+              </div>
+            </div>
+            <div class="cloud cloud-one"></div>
+            <div class="cloud cloud-two"></div>
+            <div class="cloud cloud-three"></div>
+            <div class="sparkle sparkle-one"></div>
+            <div class="sparkle sparkle-two"></div>
+            <div class="sparkle sparkle-three"></div>
+            <div class="globe-shade"></div>
+          </div>
+        </div>
+        <div class="flower-wreath" aria-hidden="true">
+          <span>&#127800;</span>
+          <span>&#127804;</span>
+          <span>&#127802;</span>
+          <span>&#127799;</span>
+          <span>&#127804;</span>
+          <span>&#127800;</span>
+        </div>
+        <div class="heart-particles" id="heart-particles" aria-hidden="true"></div>
+        <div class="music-particles" id="music-particles" aria-hidden="true"></div>
+        <div class="care-particles" id="care-particles" aria-hidden="true"></div>
+        <div class="kiss-particles" id="kiss-particles" aria-hidden="true"></div>
+        <div class="clean-effects" id="clean-effects" aria-hidden="true">
+          <div class="clean-effect recycle-effect" id="recycle-effect">
+            <div class="garbage-truck">
+              <div class="truck-body"></div>
+              <div class="truck-cab"></div>
+              <div class="truck-wheel truck-wheel-left"></div>
+              <div class="truck-wheel truck-wheel-right"></div>
+            </div>
+          </div>
+          <div class="clean-effect eco-effect" id="eco-effect">
+            <div class="broom">
+              <div class="broom-handle"></div>
+              <div class="broom-head"></div>
+            </div>
+          </div>
+          <div class="clean-effect beach-effect" id="beach-effect">
+            <div class="picker-tool">
+              <div class="picker-stick"></div>
+              <div class="picker-claw"></div>
+            </div>
+            <div class="plastic-bottle"></div>
+            <div class="garbage-bag"></div>
+          </div>
+          <div class="clean-effect energy-effect" id="energy-effect">
+            <div class="energy-core" id="energy-core">
+              <span class="energy-glow"></span>
+            </div>
+          </div>
+          <div class="clean-effect ocean-effect" id="ocean-effect">
+            <div class="ocean-net">
+              <div class="net-rope"></div>
+              <div class="net-bag">🧴 🥫 🧃</div>
+            </div>
+          </div>
+        </div>
+        <div class="fish-zone" aria-hidden="true">
+          <span class="fish fish-one">&#128031;</span>
+          <span class="fish fish-two">&#128032;</span>
+        </div>
+        <div class="star-trail" aria-hidden="true">
+          <span class="trail-dot dot-pink"></span>
+          <span class="trail-dot dot-green"></span>
+          <span class="trail-dot dot-purple"></span>
+        </div>
+        <div class="world-star" aria-hidden="true">&#11088;</div>
+        <div class="orbit-hearts" aria-hidden="true">
+          <span class="orbit-heart heart-1">&#9829;</span>
+          <span class="orbit-heart heart-2">&#9829;</span>
+          <span class="orbit-heart heart-3">&#9829;</span>
+          <span class="orbit-heart heart-4">&#9829;</span>
+          <span class="orbit-heart heart-5">&#9829;</span>
+          <span class="orbit-heart heart-6">&#9829;</span>
+          <span class="orbit-heart heart-7">&#9829;</span>
+          <span class="orbit-heart heart-8">&#9829;</span>
+          <span class="orbit-heart heart-9">&#9829;</span>
+          <span class="orbit-heart heart-10">&#9829;</span>
+          <span class="orbit-heart heart-11">&#9829;</span>
+          <span class="orbit-heart heart-12">&#9829;</span>
+          <span class="orbit-heart heart-13">&#9829;</span>
+          <span class="orbit-heart heart-14">&#9829;</span>
+          <span class="orbit-heart heart-15">&#9829;</span>
+          <span class="orbit-heart heart-16">&#9829;</span>
+          <span class="orbit-heart heart-17">&#9829;</span>
+          <span class="orbit-heart heart-18">&#9829;</span>
+          <span class="orbit-heart heart-19">&#9829;</span>
+          <span class="orbit-heart heart-20">&#9829;</span>
+          <span class="orbit-heart heart-21">&#9829;</span>
+          <span class="orbit-heart heart-22">&#9829;</span>
+          <span class="orbit-heart heart-23">&#9829;</span>
+          <span class="orbit-heart heart-24">&#9829;</span>
+          <span class="orbit-heart heart-25">&#9829;</span>
+        </div>
+      </div>
+      <p class="earth-message" id="earth-message" aria-live="polite"></p>
+
+      <div class="controls-panel">
+        <div class="clean-menu" id="clean-menu" hidden aria-label="Clean options">
+          <button class="heart-option option-recycling" type="button" data-clean-effect="recycle"><span class="heart-option-hearts" aria-hidden="true">&#10084;&#10084;&#10084;&#10084;&#10084;</span><span class="heart-option-label" data-clean-label="recycle">Recycling</span></button>
+          <button class="heart-option option-environment" type="button" data-clean-effect="eco"><span class="heart-option-hearts" aria-hidden="true">&#10084;&#10084;&#10084;&#10084;&#10084;</span><span class="heart-option-label" data-clean-label="eco">Clean Environment</span></button>
+          <button class="heart-option option-beach" type="button" data-clean-effect="beach"><span class="heart-option-hearts" aria-hidden="true">&#10084;&#10084;&#10084;&#10084;&#10084;</span><span class="heart-option-label" data-clean-label="beach">Beach Cleanup</span></button>
+          <button class="heart-option option-energy" type="button" data-clean-effect="energy"><span class="heart-option-hearts" aria-hidden="true">&#10084;&#10084;&#10084;&#10084;&#10084;</span><span class="heart-option-label" data-clean-label="energy">Clean Energy</span></button>
+          <button class="heart-option option-ocean" type="button" data-clean-effect="ocean"><span class="heart-option-hearts" aria-hidden="true">&#10084;&#10084;&#10084;&#10084;&#10084;</span><span class="heart-option-label" data-clean-label="ocean">Ocean Cleanup</span></button>
+        </div>
+
+        <div class="rainbow-menu" id="rainbow-menu" hidden aria-label="Rainbow hearts">
+          <button class="rainbow-heart rainbow-red" type="button" data-heart-color="#ff5b7f" aria-label="Red heart">&#9829;</button>
+          <button class="rainbow-heart rainbow-orange" type="button" data-heart-color="#ff9b42" aria-label="Orange heart">&#9829;</button>
+          <button class="rainbow-heart rainbow-yellow" type="button" data-heart-color="#ffd84d" aria-label="Yellow heart">&#9829;</button>
+          <button class="rainbow-heart rainbow-green" type="button" data-heart-color="#68d96f" aria-label="Green heart">&#9829;</button>
+          <button class="rainbow-heart rainbow-blue" type="button" data-heart-color="#5da8ff" aria-label="Blue heart">&#9829;</button>
+          <button class="rainbow-heart rainbow-indigo" type="button" data-heart-color="#7267ff" aria-label="Indigo heart">&#9829;</button>
+          <button class="rainbow-heart rainbow-violet" type="button" data-heart-color="#b46cff" aria-label="Violet heart">&#9829;</button>
+        </div>
+
+        <div class="action-buttons" aria-label="Magic action buttons">
+          <button class="action-button action-clean" type="button" data-main-label="clean">Clean</button>
+          <button class="action-button action-heart" type="button" data-main-label="heart">Heart</button>
+          <button class="action-button action-charity" type="button" data-main-label="care">Care</button>
+          <button class="action-button action-music" type="button" data-main-label="music">Music</button>
+          <button class="action-button action-kiss" type="button" data-main-label="kiss">Kiss</button>
+        </div>
+      </div>
+    </section>
+
+    <p class="message" id="message">Press Clean to open kind cleanup actions and grow the world tree.</p>
+    <audio id="background-music" src="love_earth.mp3" loop preload="auto"></audio>
+    <button class="music-toggle-button" id="music-toggle-button" type="button" aria-pressed="false">Music OFF</button>
+    <button class="reset-button" id="reset-button" type="button">Reset Game</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
