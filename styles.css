@@ -836,10 +836,10 @@ h1 {
 
 .earth-wrap {
   position: relative;
-  width: min(65vw, 420px);   /* 🔴 稍微縮小 */
-  margin: 140px auto 0;      /* 🔴 往下推（避免撞記分板） */
-  display: block;
-  margin: 0 auto;
+  width: 100%;              /* 🔴 改這個！ */
+  max-width: 420px;         /* 限制最大寬 */
+  margin: 180px auto 0;     /* 🔴 再往下 */
+  text-align: center;       /* 🔴 保證內部置中 */
 }
 
 .fish-zone,
