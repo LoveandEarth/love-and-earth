@@ -841,7 +841,7 @@ h1 {
   margin: 0 auto;              /* 先清掉原本 margin */
   text-align: center;
 
-  transform: translate(-8%, 100%);  /* 🔴 往左 + 往下一個地球高度 */
+  transform: translate(-8%, 250%);  /* 🔴 往左 + 往下一個地球高度 */
   display: block;
 }
 
