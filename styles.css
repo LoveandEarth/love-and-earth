@@ -838,11 +838,11 @@ h1 {
  position: relative;
   width: 100%;
   max-width: 420px;
-  margin: 360px auto 0;
+  margin: 0 auto;              /* 先清掉原本 margin */
   text-align: center;
-  transform: translateX(-8%);
+
+  transform: translate(-8%, 100%);  /* 🔴 往左 + 往下一個地球高度 */
   display: block;
-  margin: 0 auto;
 }
 
 .fish-zone,
