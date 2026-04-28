@@ -10,6 +10,20 @@
   --snow: #f8fdff;
 }
 
+#earth {
+  display: block;
+  margin: 0 auto;
+  width: 60vw;
+  max-width: 300px;
+  height: auto;
+}
+
+#tree {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 * {
   box-sizing: border-box;
 }
