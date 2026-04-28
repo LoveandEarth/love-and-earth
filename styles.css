@@ -12,22 +12,21 @@
 
 #earth {
   display: block;
-  margin: 20px auto;
-  width: 36vw;   /* 原本60vw → 60% × 0.6 = 36 */
-  max-width: 180px; /* 原本300 → 180 */
+  margin: 40px auto 0 auto;
+  width: 36vw;
+  max-width: 180px;
   height: auto;
 
-  position: relative;
-  left: 0;
+  position: static;   /* 🔴 很重要 */
   transform: none;
+  left: auto;
 }
 
 #tree {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;   /* 或原本數值 × 0.6 */
-  z-index: 2;
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+  max-width: 120px;
 }
 
 * {
@@ -182,6 +181,8 @@ h1 {
   background: var(--panel);
   backdrop-filter: blur(8px);
   box-shadow: 0 16px 28px rgba(0, 0, 0, 0.2);
+  transform: scale(0.6);
+  transform-origin: top center;
   z-index: 5;
 }
 
