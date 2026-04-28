@@ -16,6 +16,10 @@
   width: 60vw;
   max-width: 300px;
   height: auto;
+
+  position: relative;
+  left: 0;
+  transform: none;
 }
 
 #tree {
