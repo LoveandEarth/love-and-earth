@@ -171,9 +171,11 @@ h1 {
 }
 
 .scoreboard {
-  position: absolute;
-  top: 18px;
-  right: 18px;
+  position: fixed;
+  top: 10px;
+  right: 10px;   /* 🔴 靠右 */
+  transform: scale(0.6);
+  transform-origin: top right;
   width: min(220px, calc(100% - 36px));
   padding: 14px 16px;
   border: 1px solid rgba(255, 255, 255, 0.16);
@@ -181,8 +183,6 @@ h1 {
   background: var(--panel);
   backdrop-filter: blur(8px);
   box-shadow: 0 16px 28px rgba(0, 0, 0, 0.2);
-  transform: scale(0.6);
-  transform-origin: top center;
   z-index: 5;
 }
 
@@ -836,9 +836,10 @@ h1 {
 
 .earth-wrap {
   position: relative;
-  width: min(78vw, 560px);
-  height: min(78vw, 560px);
-  margin: 90px auto 0;
+  width: min(65vw, 420px);   /* 🔴 稍微縮小 */
+  margin: 140px auto 0;      /* 🔴 往下推（避免撞記分板） */
+  display: block;
+  margin: 0 auto;
 }
 
 .fish-zone,
