@@ -833,7 +833,7 @@ h1 {
   margin: 568px auto 0;
   text-align: center;
 
-  transform: translateX(-1%);  /* 保留你剛剛成功的置中修正 */
+  transform: translateX(-0%);  /* 保留你剛剛成功的置中修正 */
   display: block;
 }
 
