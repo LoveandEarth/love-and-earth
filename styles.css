@@ -826,8 +826,8 @@ h1 {
 
 .earth-wrap {
   position: relative;
+  width: 60%;
   max-width: 180px;
-  width: 60%;      /* 縮小40% */
   height: auto;
   margin: 368px auto 0;
   text-align: center;
