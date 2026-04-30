@@ -826,9 +826,9 @@ h1 {
 
 .earth-wrap {
   position: relative;
-  width: min(20vw, 300px);
-  height: min(20vw, 300px);
-  transform: scale(0.8);
+  width: min(42vw, 300px);
+  height: min(42vw, 300px);
+  transform: scale(0.6);
   transform-origin: top center;
   margin: 368px auto 0;
   text-align: center;
@@ -2741,7 +2741,7 @@ h1 {
   }
 
   .earth {
-    width: 20vw;
+    width: 60vw;
     max-width: 300px;
     height: auto;
     aspect-ratio: 1 / 1;
