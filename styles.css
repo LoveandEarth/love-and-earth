@@ -826,13 +826,12 @@ h1 {
 
 .earth-wrap {
   position: relative;
-  width: 60%;
-  max-width: 180px;
-  height: auto;
+  width: min(47vw, 336px);
+  height: min(47vw, 336px);
   margin: 368px auto 0;
   text-align: center;
 
-  transform: translateX(-8%);  /* 保留你剛剛成功的置中修正 */
+  transform: translateX(-7%);  /* 保留你剛剛成功的置中修正 */
   display: block;
 }
 
