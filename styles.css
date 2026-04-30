@@ -830,10 +830,10 @@ h1 {
   height: min(42vw, 300px);
   transform: scale(0.45);
   transform-origin: top center;
-  margin: 568px auto 0;
+  margin: 968px auto 0;
   text-align: center;
 
-  transform: translateX(-0%);  /* 保留你剛剛成功的置中修正 */
+  transform: translateX(+1%);  /* 保留你剛剛成功的置中修正 */
   display: block;
 }
 
