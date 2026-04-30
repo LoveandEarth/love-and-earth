@@ -10,11 +10,7 @@
   --snow: #f8fdff;
 }
 
-#earth {
-  position: static;   /* 🔴 很重要 */
-  transform: none;
-  left: auto;
-}
+
 
 #tree {
   display: block;
