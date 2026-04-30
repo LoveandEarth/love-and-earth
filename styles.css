@@ -838,7 +838,7 @@ h1 {
   position: relative;
   width: 100%;
   max-width: 420px;
-  margin: 220px auto 0;   /* 🔴 往下推（穩定） */
+  margin: 280px auto 0;
   text-align: center;
 
   transform: translateX(-8%);  /* 保留你剛剛成功的置中修正 */
