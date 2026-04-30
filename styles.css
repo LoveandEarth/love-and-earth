@@ -826,8 +826,8 @@ h1 {
 
 .earth-wrap {
   position: relative;
-  width: min(47vw, 336px);
-  height: min(47vw, 336px);
+  width: min(42vw, 300px);
+  height: min(42vw, 300px);
   margin: 368px auto 0;
   text-align: center;
 
